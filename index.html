@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <style>
+        .total {
+            font-weight: bold;
+        }
+        .headline {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff; /* Bootstrap primary color */
+        }
+    </style>
+ <!-- Remove Favicon -->
+ <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="headline">Budget Planner</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Salary and Allowances Section -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Salary and Allowances
+                        <span class="cal-total">Total: <span class="salaryTotal">0.00</span></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Salary</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Lecture Fee / Part Time</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Interest, Dividend</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Rental Income (Property/Vehicle)</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Business Income</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Pension</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Remittances (Relations)</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Other Income</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control salary" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group total">Total: <span class="salaryTotal">0.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Loan and Credit Cards Section -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Loan and Credit Cards
+                        <span class="cal-total">Total: <span class="loanTotal">0.00</span></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Lease/Vehicle Repayment</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Personal Loans</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Housing Loans</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Education Loans</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Other Loans</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Credit Card 1</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Credit Card 2</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Other</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control loan" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group total">Total: <span class="loanTotal">0.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Education
+                        <span class="cal-total">Total: <span class="educationTotal">0.00</span></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>School Fees</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control education" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Tuition Fees</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control education" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>University Fees</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control education" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Other</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control education" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group total">Total: <span class="educationTotal">0.00</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <!-- Insurance Section -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Insurance
+                        <span class="cal-total">Total: <span class="insuranceTotal">0.00</span></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Life/Medical</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control insurance" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>House</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control insurance" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Motor/Car</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control insurance" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Business</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control insurance" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Other Insurance</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control insurance" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group total">Total: <span class="insuranceTotal">0.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Living Expenses Section -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Living Expenses
+                        <span class="cal-total">Total: <span class="livingTotal">0.00</span></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Rent</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Electricity</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Water</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Home Phone</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Mobile Phone</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Internet/TV</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Fuel</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Transport</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Medical and Pharmaceutical</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Food/Groceries</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Clothing/Shoes</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Purchasing Online (eBay, Alibaba, etc.)</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Child Care</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Other</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control living" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group total">Total: <span class="livingTotal">0.00</span></div>
+                    </div>
+                </div>
+
+                <!-- Leisure & Entertainment Section -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Leisure & Entertainment
+                        <span class="cal-total">Total: <span class="entertainmentTotal">0.00</span></span>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Movies</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control entertainment" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Holidays - Local</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control entertainment" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Holidays - Overseas</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control entertainment" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Sports/Hobbies/Membership</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control entertainment" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Newspapers/Magazines/Books/CDs/DVDs/Movies</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control entertainment" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-6"><label>Gifts</label></div>
+                            <div class="col-md-6"><input type="text" class="form-control entertainment" placeholder="Ex: 100000"></div>
+                        </div>
+                        <div class="form-group total">Total: <span class="entertainmentTotal">0.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Budget Summary Section -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        Budget Summary
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <canvas id="budgetChart"></canvas>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group row">
+                                    <label class="col-md-6">Total Income</label>
+                                    <div class="col-md-6"><span id="totalIncome">0.00</span></div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6">Total Expenses</label>
+                                    <div class="col-md-6"><span id="totalExpenses">0.00</span></div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-6">Balance</label>
+                                    <div class="col-md-6"><span id="balance">0.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 text-center mt-3">
+        <button type="button" id="calculateBtnBudget" class="btn btn-primary btn-color-dark-b">Calculate</button>
+        <button type="button" class="btn btn-default ml-2" id="reset-budget-planner">Reset</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <canvas id="piechart"></canvas>
+    </div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Event handler for Calculate button
+            $('#calculateBtnBudget').click(function () {
+                updateTotals();
+                updateChart();
+            });
+
+             // Event handler for Reset button
+        $('#reset-budget-planner').click(function () {
+            // Reset all input fields
+            $('input[type="text"]').val('');
+            
+            // Reset total amounts to zero
+            $('.salaryTotal, .loanTotal, .educationTotal, .insuranceTotal, .livingTotal, .entertainmentTotal').text('0.00');
+
+            // Update chart after reset (if needed)
+            updateChart();
+        });
+
+            // Function to update totals
+            function updateTotals() {
+                var incomeTotal = calculateTotal('.salary');
+                var loanTotal = calculateTotal('.loan');
+                var educationTotal = calculateTotal('.education');
+                var insuranceTotal = calculateTotal('.insurance');
+                var livingTotal = calculateTotal('.living');
+                var entertainmentTotal = calculateTotal('.entertainment');
+
+                $('#totalIncome').text(formatCurrency(incomeTotal));
+                $('#totalExpenses').text(formatCurrency(loanTotal + educationTotal + insuranceTotal + livingTotal + entertainmentTotal));
+                $('#balance').text(formatCurrency(incomeTotal - (loanTotal + educationTotal + insuranceTotal + livingTotal + entertainmentTotal)));
+            }
+
+            // Function to calculate total for a specific category
+            function calculateTotal(className) {
+                var total = 0;
+                $(className).each(function () {
+                    var value = parseFloat($(this).val().replace(/,/g, '') || 0);
+                    total += value;
+                });
+                return total;
+            }
+
+            // Function to format currency
+            function formatCurrency(amount) {
+                return 'Rs.' + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+            }
+
+            // Function to update chart
+            function updateChart() {
+                var ctx = document.getElementById('budgetChart').getContext('2d');
+                var incomeTotal = calculateTotal('.salary');
+                var loanTotal = calculateTotal('.loan');
+                var educationTotal = calculateTotal('.education');
+                var insuranceTotal = calculateTotal('.insurance');
+                var livingTotal = calculateTotal('.living');
+                var entertainmentTotal = calculateTotal('.entertainment');
+
+                var data = {
+                    datasets: [{
+                        data: [incomeTotal, loanTotal, educationTotal, insuranceTotal, livingTotal, entertainmentTotal],
+                        backgroundColor: [
+                            '#007bff',
+                            '#dc3545',
+                            '#ffc107',
+                            '#28a745',
+                            '#6c757d',
+                            '#17a2b8'
+                        ]
+                    }],
+                    labels: [
+                        'Income',
+                        'Loan & Credit Cards',
+                        'Education',
+                        'Insurance',
+                        'Living Expenses',
+                        'Leisure & Entertainment'
+                    ]
+                };
+
+                var options = {
+                    responsive: true,
+                    legend: {
+                        position: 'right',
+                    },
+                    plugins: {
+                        datalabels: {
+                            formatter: (value, ctx) => {
+                                let sum = 0;
+                                let dataArr = ctx.chart.data.datasets[0].data;
+                                dataArr.map(data => {
+                                    sum += data;
+                                });
+                                let percentage = (value * 100 / sum).toFixed(2) + "%";
+                                return percentage;
+                            },
+                            color: '#fff',
+                        }
+                    }
+                };
+
+                var myPieChart = new Chart(ctx, {
+                    type: 'pie',
+                    data: data,
+                    options: options
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
